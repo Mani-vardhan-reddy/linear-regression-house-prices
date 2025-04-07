@@ -1,6 +1,7 @@
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
+import seaborn as sns
 from sklearn.linear_model import LinearRegression
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import r2_score, mean_squared_error, mean_absolute_error
@@ -22,6 +23,9 @@ print(data.dtypes) # data types are in correct format
 # finding the correlation between features and dependent variable
 
 print(data.corr())
+
+sns.heatmap(data.corr(),annot=True)
+plt.show()
 
 # dividing the data into dependent variable and independent variables
 
